@@ -56,10 +56,6 @@ Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph
 
 # Blockquote
 > Block Quotes
-> Block Quotes
-> Block Quotes
-> Block Quotes
-> Block Quotes
 
 # Inline Code
 \`\`\`<div></div>\`\`\`
@@ -78,7 +74,7 @@ Content 1 | Content 2 | Content 3
 Content 4 | Content 5 | Content 6
 
 # Link
-[link](https://www.freecodecamp.org)
+[https://www.freecodecamp.org](https://www.freecodecamp.org)
 
 # Image
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`;
@@ -110,15 +106,14 @@ class App extends React.Component {
             <h1>Markdown Previewer</h1>
           </div>
         </header>
-        <div class="content">
-          <div class="left section">
-            <button onClick={this.click}>Editor</button>
-            <textarea id="editor" value={this.state.editorInput} onChange={(e) => this.editorInputToMarkedOutput(e.target.value)}></textarea>
-          </div>
-          <div class="divider"></div>
-          <div class="right section">
-            <button>Preview</button>
-            <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markedOutput) }}></div>
+          <div class="row">
+            <div class="col-lg">
+              <label class="col-label">Editor</label>
+              <textarea id="editor" value={this.state.editorInput} onChange={(e) => this.editorInputToMarkedOutput(e.target.value)} />
+            </div>
+            <div class="col-lg">
+              <label class="col-label">Preview</label>
+              <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markedOutput) }} />
           </div>
         </div>
       </div>
