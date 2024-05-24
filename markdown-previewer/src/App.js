@@ -1,6 +1,6 @@
 import './App.css';
-import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-import DOMPurify from "https://esm.sh/dompurify";
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import React from 'react';
 
 // Set marked options
@@ -100,20 +100,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <header>
           <div>
             <h1>Markdown Previewer</h1>
           </div>
         </header>
-          <div class="row">
-            <div class="col-lg">
-              <label class="col-label">Editor</label>
-              <textarea id="editor" value={this.state.editorInput} onChange={(e) => this.editorInputToMarkedOutput(e.target.value)} />
-            </div>
-            <div class="col-lg">
-              <label class="col-label">Preview</label>
-              <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markedOutput) }} />
+        <div className="row">
+          <div className="col-lg">
+            <label className="col-label">Editor</label>
+            <textarea id="editor" value={this.state.editorInput} onChange={(e) => this.editorInputToMarkedOutput(e.target.value)} />
+          </div>
+          <div className="col-lg">
+            <label className="col-label">Preview</label>
+            <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.markedOutput) }} />
           </div>
         </div>
       </div>

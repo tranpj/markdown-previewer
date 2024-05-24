@@ -1,7 +1,7 @@
-:root{
+:root {
   --background-color: #212529;
   --header-text-color: #ffffff;
-  --editor-preview-bg-color: rgba(255,255,255,0.8);
+  --editor-preview-bg-color: rgba(255, 255, 255, 0.8);
 }
 
 .App {
@@ -17,15 +17,16 @@
   background-size: cover;
 }
 
-header, .col-label{
+header,
+.col-label {
   color: var(--header-text-color);
 }
 
-.row{
+.row {
   width: 100%;
 }
 
-#editor{
+#editor {
   width: 100%;
   height: fit-content;
   min-height: 100%;
@@ -35,11 +36,11 @@ header, .col-label{
   border: var(--background-color) solid 1px;
 }
 
-#preview{
+#preview {
   background-color: var(--editor-preview-bg-color);
   border: var(--background-color) solid 1px;
 }
 
-img{
+img {
   max-width: 100%;
 }
